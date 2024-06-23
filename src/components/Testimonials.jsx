@@ -2,7 +2,7 @@ import React from "react";
 import { testimonials1, testimonials2 } from "../constants";
 const Testimonials = () => {
 	return (
-		<div className="px-[5%] mt-24">
+		<div className="px-[5%] mt-24 animate-apper">
 			{testimonials1.map((items, index) => (
 				<div key={index} className="max-w-5xl m-auto flex justify-center items-center ">
 					<div className="lg:flex items-center space-x-12 justify-center">

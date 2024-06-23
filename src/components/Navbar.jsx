@@ -29,7 +29,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex items-center space-x-8 text-neutral-300">
             <Link
-              to="/signin"
+              to="/register"
               className="px-4 py-3 border border-nuetral-800 rounded-md  "
             >
               Create an account
@@ -48,7 +48,7 @@ const Navbar = () => {
       </nav>
       <div className="">
         {navbardrawer && (
-          <div className=" fixed z-10 flex w-full top-[60px] flex-col py-8 px-2  items-center  bg-neutral-300 lg:hidden">
+          <div className=" fixed z-10 flex w-full top-[60px] flex-col py-8 px-2  items-center  bg-neutral-300 lg:hidden animate-fadeIn">
             {
               <ul className=" lg:flex ">
                 {navItems.map((items, index) => (
@@ -61,7 +61,7 @@ const Navbar = () => {
 
             <div className="lg:hidden flex items-center space-x-8 mt-6 mb-12 ">
               <Link
-                to="/signup"
+                to="/register"
                 className="px-4 py-3 border border-nuetral-800 rounded-md "
               >
                 Create an account

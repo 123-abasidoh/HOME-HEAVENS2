@@ -7,35 +7,13 @@ html {
 }
 body {
 	font-family: "Courier New", Courier, monospace;
-	background-color: #fff;
+	background-color: #fff;scroll-behavior: smooth;
 }
 .hero {
 	background: url(./assets/sliding/hero.4.png) no-repeat center;
 	background-size: cover;
 }
 .login {
-	background: url(./assets/sliding/hero.4.png) no-repeat center;
+	background: url(./assets/sliding/image3.png) no-repeat center;
 	background-size: cover;
-}
-input {
-	border-radius: 10px;
-	padding: 12px 20px;
-	width: 100%;
-	outline: none;
-}
-::placeholder {
-	font-style: oblique;
-	text-transform: uppercase;
-}
-input[type="submit"] {
-	background: rgb(33, 199, 119);
-	cursor: pointer;
-	transition: background 0.5s;
-	color: white;
-}
-input[type="submit"]:hover {
-	background: transparent;
-	cursor: pointer;
-	color: white;
-	border: white 1px solid;
 }
