@@ -1,28 +1,30 @@
 // src/VerifyEmail.jsx
 import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
 
 const VerifyEmail = () => {
-    const location = useLocation();
-    const token = new URLSearchParams(location.search).get('token');
+  const { id, token } = useParams();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const verifyEmail = async () => {
-            try {
-                const response = await axios.get(`https://home-heaven.onrender.com/api/v1auth/verify/:id/:token=${token}`);
-                alert(response.data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
+  useEffect(() => {
+    const verifyEmail = async () => {
+      try {
+        await axios.get(`http://localhost:3000/api/v1/auth/verify/${id}/${token}`);
+        navigate('/login');
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-        if (token) {
-            verifyEmail();
-        }
-    }, [token]);
+    verifyEmail();
+  }, [id, token, navigate]);
 
-    return <div>Verifying...</div>;
+  return (
+    <div className="container mx-auto p-4">
+      <p>Verifying your email...</p>
+    </div>
+  );
 };
 
 export default VerifyEmail;

@@ -4,7 +4,7 @@ import { HeroSection } from "./components/HeroSection";
 import Workflow from "./components/Workflow";
 import FeatureSection from "./components/FeatureSection";
 import Testimonials from "./components/Testimonials";
-import Pricing from "./components/Pricing";
+// import Pricing from "./components/Pricing";
 
 const App = () => {
 	return (
@@ -17,7 +17,7 @@ const App = () => {
 
 			<Testimonials />
 			<Navbar />
-			<Pricing />
+			{/* <Pricing /> */}
 		</>
 	);
 };

@@ -25,10 +25,7 @@ const router = createBrowserRouter([
 		path: "/register",
 		element: <Register />,
 	},
-	{
-		path: "/verify-email",
-		element: <VerifyEmail />,
-	},
+	{ path: "/verify-email/:id/:token", element: <VerifyEmail /> },
 	{
 		path: "/dashboard",
 		element: (
